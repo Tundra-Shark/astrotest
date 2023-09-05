@@ -1,0 +1,63 @@
+---
+const { handle } = Astro.params;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>{ handle }</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible"   content="IE=edge">
+    <meta name="description"             content="${description}">
+    <meta name="viewport"                content="width=device-width,initial-scale=1,viewport-fit=cover">
+    <meta name="theme-color"             content="#42a8dc">
+    <meta name="twitter:card"            content="summary">
+    <meta name="twitter:title"           content="Bukoya">
+    <meta name="twitter:site"            content="@BukoyaStar">
+    <meta name="twitter:image"           content="${faviconURL}">
+    <meta name="twitter:image:alt"       content="Bukoya">
+    <meta name="twitter:domain"          content="bukoya.com">
+    <meta name="twitter:url"             content="https://bukoya.com/">
+    <meta name="twitter:description"     content="${descriptionTwitter}">
+    <meta property="og:url"              content="${thisPath}">
+    <meta property="og:title"            content="${titleOG}">
+    <meta property="og:description"      content="${descriptionOG}">
+    <meta property="og:locale"           content="en_US">
+    <meta property="og:type"             content="website">
+    <meta property="og:url"              content="https://bukoya.com/">
+    <meta property="og:site_name"        content="Bukoya">
+    <meta property="og:image:alt"        content="Bukoya">
+    <meta property="og:image:type"       content="image/webp">
+    <meta property="og:image"            content="${faviconURL}">
+    <meta property="og:image:url"        content="${faviconURL}">
+    <meta property="og:image:secure_url" content="${faviconURL}">
+    <meta property="og:image:width"      content="794">
+    <meta property="og:image:height"     content="794">
+    <link rel="icon"             href="${faviconURL}" type="image/png">
+    <link rel="apple-touch-icon" href="./pwa-icons/apple-touch-icon.png" sizes="180x180">
+    <link rel="canonical"        href="${thisPath}">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json" async>
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Example",
+      "keywords": "art",
+      "url": "https://example.com",
+      "logo": "${faviconURL}"
+    }
+    </script>
+
+    <style>
+      body {
+        background-color: #777;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app">
+      <h1>{ handle }</h1>
+    </div>
+  </body>
+</html>
